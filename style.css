@@ -1,0 +1,196 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  overflow: hidden;
+  background-color: black;
+  background-image: url("./green-snake-game-character-bqvxt2p5oibadgqn.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  animation: backgroundMove 20s infinite linear;
+  -webkit-animation: backgroundMove 20s infinite linear;
+}
+#gameWorld {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+#gameBoard {
+  border: none;
+  width: 500px;
+  height: 500px;
+  border-radius: 2%;
+  -webkit-border-radius: 2%;
+  -moz-border-radius: 2%;
+  -ms-border-radius: 2%;
+  -o-border-radius: 2%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#gameScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  gap: 4 px;
+}
+
+.control-container {
+  position: absolute;
+  font-size: 2rem;
+  width: 120px;
+  height: 120px;
+  bottom: 20%;
+  left: 10%;
+}
+
+.control-container .top-button {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.control-container .right-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.control-container .left-button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.control-container .down-button {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+button {
+  padding: 0.4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 70px;
+  border-radius: 6%;
+  -webkit-border-radius: 6%;
+  -moz-border-radius: 6%;
+  -ms-border-radius: 6%;
+  -o-border-radius: 6%;
+}
+
+.button-container {
+  display: flex;
+  gap: 2rem;
+}
+@media screen and (min-width: 360px) {
+  #gameBoard {
+    width: 320px;
+    height: 320px;
+  }
+  .control-container {
+    position: absolute;
+    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+    bottom: 10%;
+    left: 50%;
+    translate: translateX(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 780px) {
+  #gameBoard {
+    width: 400px;
+    height: 400px;
+  }
+  .control-container {
+    position: absolute;
+    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+    bottom: 10%;
+    left: 50%;
+    translate: translateX(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #gameBoard {
+    width: 500px;
+    height: 500px;
+  }
+  .control-container {
+    position: absolute;
+    font-size: 2rem;
+    width: 120px;
+    height: 120px;
+    bottom: 20%;
+    left: 10%;
+  }
+}
+
+/* animation */
+@keyframes backgroundMove {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  100% {
+    background-position: center;
+  }
+}
+
+.mobileStart {
+  display: flex;
+  flex-direction: column;
+  width:200px;
+  height:00px;
+  justify-content: center;
+  align-items: center;
+}
+.sub-mobileStart{
+  display: flex;
+  flex-direction: column;
+}

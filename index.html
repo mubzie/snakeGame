@@ -23,24 +23,22 @@
     </div>
     <div id="gameWorld">
       <canvas id="gameBoard" style="background-color: white"></canvas>
-    </div>
-    <div class="control-container">
-      <div class="">
-        <i id="up-button" class="bi bi-caret-up-square-fill top-button"></i>
-        <i
-          id="right-button"
-          class="bi bi-caret-right-square-fill right-button"
-        ></i>
-        <i
-          id="left-button"
-          class="bi bi-caret-left-square-fill left-button"
-        ></i>
-        <i
-          id="down-button"
-          class="bi bi-caret-down-square-fill down-button"
-        ></i>
+      <div id="startPrompt" class="start-prompt">
+        <span class="desktop-prompt">Press ENTER to Start</span>
+        <span class="mobile-prompt">Tap to Start</span>
+      </div>
+      <div class="keyboard-controls">
+        <div class="key-row">
+          <div class="key">W / ↑</div>
+        </div>
+        <div class="key-row">
+          <div class="key">A / ←</div>
+          <div class="key">S / ↓</div>
+          <div class="key">D / →</div>
+        </div>
       </div>
     </div>
+    
   </body>
   <script src="./script.js" type="module"></script>
   <script src="./script2.js"></script>
